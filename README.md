@@ -14,8 +14,8 @@ To run it locally:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
-   cd yourrepo
+   git clone https://github.com/balderash_12/streamlit-app.git
+   cd streamlit-app
 
 2. Create and activate a virtual environment (optional but recommended):
    ```bash
