@@ -3,19 +3,20 @@
 
 
 # %%
-%pip install numpy==1.26.4
-%pip install torch==2.2.2
-%pip install spacy==3.7.2 thinc==8.2.2
-%pip install nltk textblob
+#%pip install numpy==1.26.4
+#%pip install torch==2.2.2
+#%pip install spacy==3.7.2 thinc==8.2.2
+#%pip install nltk textblob
 
 
 # %%
-!python -m spacy download en_core_web_sm
+#!python -m spacy download en_core_web_sm
 
 
 # %%
 import re
 import spacy
+
 from textblob import TextBlob
 import nltk
 from nltk.corpus import stopwords
