@@ -71,55 +71,6 @@ else:
     print("Overall Sentiment: Neutral")
 
 
-# %%
-import re
-import spacy
-from textblob import TextBlob
-import nltk
-from nltk.corpus import stopwords
-
-# Download stopwords if not already downloaded
-nltk.download('stopwords')
-
-# Load spaCy model
-nlp = spacy.load('en_core_web_sm')
-
-# Text normalization function
-def normalize_text(text):
-    text = text.lower()
-    text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
-    text = re.sub(r'@\w+|#\w+', '', text)
-    text = re.sub(r'[^\w\s]', '', text)
-    text = re.sub(r'\s+', ' ', text).strip()
-    stop_words = set(stopwords.words('english'))
-    filtered_words = [w for w in text.split() if w not in stop_words]
-    return ' '.join(filtered_words)
-
-# Interactive loop
-while True:
-    print("\n--- Text Analytics Interactive Tool ---")
-    user_input = input("Enter your text (or type 'exit' to quit):\n> ")
-
-    if user_input.lower() == 'exit':
-        break
-
-    normalized_text = normalize_text(user_input)
-    print("\nNormalized Text:", normalized_text)
-
-    doc = nlp(normalized_text)
-    entities = [(ent.text, ent.label_) for ent in doc.ents]
-    print("Named Entities:", entities if entities else "No named entities found.")
-
-    sentiment = TextBlob(normalized_text).sentiment
-    print(f"Sentiment Polarity: {sentiment.polarity:.3f}, Subjectivity: {sentiment.subjectivity:.3f}")
-
-    if sentiment.polarity > 0:
-        print("Overall Sentiment: Positive")
-    elif sentiment.polarity < 0:
-        print("Overall Sentiment: Negative")
-    else:
-        print("Overall Sentiment: Neutral")
-
 
 # %%
 
