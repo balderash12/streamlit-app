@@ -1,5 +1,5 @@
 # %%
-%pip uninstall -y numpy thinc spacy torch
+#%pip uninstall -y numpy thinc spacy torch
 
 
 # %%
