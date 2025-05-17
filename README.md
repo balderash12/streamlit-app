@@ -33,9 +33,10 @@ To run it locally:
 5. Launch the app:
    ```bash
    streamlit run app.py
+Alternatively, run the app.py file in VS Code.
 
 🧠 Tech Stack
-Streamlit
-NLTK
-TextBlob
-spaCy
+- Streamlit
+- NLTK
+- TextBlob
+- spaCy
