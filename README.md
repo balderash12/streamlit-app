@@ -17,18 +17,22 @@ To run it locally:
    git clone https://github.com/yourusername/yourrepo.git
    cd yourrepo
 
-Create and activate a virtual environment (optional but recommended):
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. Create and activate a virtual environment (optional but recommended):
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
 
-Install dependencies:
-pip install -r requirements.txt
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
-Run setup script:
-bash setup.sh
+4. Run setup script:
+   ```bash
+   bash setup.sh
 
-Launch the app:
-streamlit run app.py
+5. Launch the app:
+   ```bash
+   streamlit run app.py
 
 🧠 Tech Stack
 Streamlit
